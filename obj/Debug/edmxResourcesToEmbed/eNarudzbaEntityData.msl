@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="T34_DBModelStoreContainer" CdmEntityContainer="T34_DBEntities6">
+    <EntitySetMapping Name="Hrana">
+      <EntityTypeMapping TypeName="T34_DBModel.Hrana">
+        <MappingFragment StoreEntitySet="Hrana">
+          <ScalarProperty Name="IDhrana" ColumnName="IDhrana" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+          <ScalarProperty Name="IDvelicinaHrane" ColumnName="IDvelicinaHrane" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HranaSastojci">
+      <EntityTypeMapping TypeName="T34_DBModel.HranaSastojci">
+        <MappingFragment StoreEntitySet="HranaSastojci">
+          <ScalarProperty Name="IDhranaSastojci" ColumnName="IDhranaSastojci" />
+          <ScalarProperty Name="IDsastojci" ColumnName="IDsastojci" />
+          <ScalarProperty Name="IDhrana" ColumnName="IDhrana" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="komentariHrana">
+      <EntityTypeMapping TypeName="T34_DBModel.komentariHrana">
+        <MappingFragment StoreEntitySet="komentariHrana">
+          <ScalarProperty Name="komentariHranaID" ColumnName="komentariHranaID" />
+          <ScalarProperty Name="komentarHrana" ColumnName="komentarHrana" />
+          <ScalarProperty Name="hranaID" ColumnName="hranaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="komentariPice">
+      <EntityTypeMapping TypeName="T34_DBModel.komentariPice">
+        <MappingFragment StoreEntitySet="komentariPice">
+          <ScalarProperty Name="komentariPiceID" ColumnName="komentariPiceID" />
+          <ScalarProperty Name="komentarPice" ColumnName="komentarPice" />
+          <ScalarProperty Name="piceID" ColumnName="piceID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Korisnik">
+      <EntityTypeMapping TypeName="T34_DBModel.Korisnik">
+        <MappingFragment StoreEntitySet="Korisnik">
+          <ScalarProperty Name="OIB" ColumnName="OIB" />
+          <ScalarProperty Name="Ime" ColumnName="Ime" />
+          <ScalarProperty Name="Prezime" ColumnName="Prezime" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Lozinka" ColumnName="Lozinka" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Adresa" ColumnName="Adresa" />
+          <ScalarProperty Name="Student" ColumnName="Student" />
+          <ScalarProperty Name="TipKorisnika" ColumnName="TipKorisnika" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Narudzba">
+      <EntityTypeMapping TypeName="T34_DBModel.Narudzba">
+        <MappingFragment StoreEntitySet="Narudzba">
+          <ScalarProperty Name="IDnarudzba" ColumnName="IDnarudzba" />
+          <ScalarProperty Name="DatumVrijemeZaprimanja" ColumnName="DatumVrijemeZaprimanja" />
+          <ScalarProperty Name="IDnarucitelj" ColumnName="IDnarucitelj" />
+          <ScalarProperty Name="Zavrseno" ColumnName="Zavrseno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NarudzbaHrana">
+      <EntityTypeMapping TypeName="T34_DBModel.NarudzbaHrana">
+        <MappingFragment StoreEntitySet="NarudzbaHrana">
+          <ScalarProperty Name="IDnarudzbaHrana" ColumnName="IDnarudzbaHrana" />
+          <ScalarProperty Name="IDnarudzba" ColumnName="IDnarudzba" />
+          <ScalarProperty Name="IDhrana" ColumnName="IDhrana" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NarudzbaPice">
+      <EntityTypeMapping TypeName="T34_DBModel.NarudzbaPice">
+        <MappingFragment StoreEntitySet="NarudzbaPice">
+          <ScalarProperty Name="IDnarudzbaPice" ColumnName="IDnarudzbaPice" />
+          <ScalarProperty Name="IDnarudzbe" ColumnName="IDnarudzbe" />
+          <ScalarProperty Name="IDpice" ColumnName="IDpice" />
+          <ScalarProperty Name="Kolicina" ColumnName="Kolicina" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NarudzbaStatus">
+      <EntityTypeMapping TypeName="T34_DBModel.NarudzbaStatus">
+        <MappingFragment StoreEntitySet="NarudzbaStatus">
+          <ScalarProperty Name="IDnarudzbaStatus" ColumnName="IDnarudzbaStatus" />
+          <ScalarProperty Name="IDnarudzba" ColumnName="IDnarudzba" />
+          <ScalarProperty Name="IDstatus" ColumnName="IDstatus" />
+          <ScalarProperty Name="VrijemeKreiranjaStatusa" ColumnName="VrijemeKreiranjaStatusa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pice">
+      <EntityTypeMapping TypeName="T34_DBModel.Pice">
+        <MappingFragment StoreEntitySet="Pice">
+          <ScalarProperty Name="IDpice" ColumnName="IDpice" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+          <ScalarProperty Name="Kolicina" ColumnName="Kolicina" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Placanje">
+      <EntityTypeMapping TypeName="T34_DBModel.Placanje">
+        <MappingFragment StoreEntitySet="Placanje">
+          <ScalarProperty Name="IDplacanje" ColumnName="IDplacanje" />
+          <ScalarProperty Name="NacinPlacanja" ColumnName="NacinPlacanja" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrivremenaTablica">
+      <EntityTypeMapping TypeName="T34_DBModel.PrivremenaTablica">
+        <MappingFragment StoreEntitySet="PrivremenaTablica">
+          <ScalarProperty Name="IDprivremenaTablica" ColumnName="IDprivremenaTablica" />
+          <ScalarProperty Name="IDnarudzbaH" ColumnName="IDnarudzbaH" />
+          <ScalarProperty Name="IDnarudzbaP" ColumnName="IDnarudzbaP" />
+          <ScalarProperty Name="NazivHrana" ColumnName="NazivHrana" />
+          <ScalarProperty Name="NazivPice" ColumnName="NazivPice" />
+          <ScalarProperty Name="CijenaHrana" ColumnName="CijenaHrana" />
+          <ScalarProperty Name="CijenaPice" ColumnName="CijenaPice" />
+          <ScalarProperty Name="Opis" ColumnName="Opis" />
+          <ScalarProperty Name="Kolicina" ColumnName="Kolicina" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sastojci">
+      <EntityTypeMapping TypeName="T34_DBModel.Sastojci">
+        <MappingFragment StoreEntitySet="Sastojci">
+          <ScalarProperty Name="IDsastojci" ColumnName="IDsastojci" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="Kolicina" ColumnName="Kolicina" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Status">
+      <EntityTypeMapping TypeName="T34_DBModel.Status">
+        <MappingFragment StoreEntitySet="Status">
+          <ScalarProperty Name="IDstatus" ColumnName="IDstatus" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="T34_DBModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipKorisnika">
+      <EntityTypeMapping TypeName="T34_DBModel.TipKorisnika">
+        <MappingFragment StoreEntitySet="TipKorisnika">
+          <ScalarProperty Name="IDtipKorisnika" ColumnName="IDtipKorisnika" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VelicinaHrane">
+      <EntityTypeMapping TypeName="T34_DBModel.VelicinaHrane">
+        <MappingFragment StoreEntitySet="VelicinaHrane">
+          <ScalarProperty Name="IDvelicinaHrane" ColumnName="IDvelicinaHrane" />
+          <ScalarProperty Name="Opis" ColumnName="Opis" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

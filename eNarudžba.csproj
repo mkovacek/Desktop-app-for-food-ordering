@@ -1,0 +1,353 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{539DE645-A534-4419-AF34-96DD098DE97E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>eNarudžba</RootNamespace>
+    <AssemblyName>eNarudžba</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>1403385911_127827.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="eNarudzbaEntityData.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>eNarudzbaEntityData.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="eNarudzbaEntityData.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>eNarudzbaEntityData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="eNarudzbaEntityData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>eNarudzbaEntityData.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\GlavnaFormaDjelatnik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\GlavnaFormaDjelatnik.Designer.cs">
+      <DependentUpon>GlavnaFormaDjelatnik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\GlavnaFormaNarucitelj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\GlavnaFormaNarucitelj.Designer.cs">
+      <DependentUpon>GlavnaFormaNarucitelj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\KomentiranjeHrane.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\KomentiranjeHrane.Designer.cs">
+      <DependentUpon>KomentiranjeHrane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\PonudaJelovnika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\PonudaJelovnika.Designer.cs">
+      <DependentUpon>PonudaJelovnika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\poruke.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\poruke.Designer.cs">
+      <DependentUpon>poruke.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\PorukeKomentiranje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\PorukeKomentiranje.Designer.cs">
+      <DependentUpon>PorukeKomentiranje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\PorukePonuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\PorukePonuda.Designer.cs">
+      <DependentUpon>PorukePonuda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\PorukeRegistracija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\PorukeRegistracija.Designer.cs">
+      <DependentUpon>PorukeRegistracija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\PorukeStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\PorukeStatus.Designer.cs">
+      <DependentUpon>PorukeStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\PorukeUpravljanje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\PorukeUpravljanje.Designer.cs">
+      <DependentUpon>PorukeUpravljanje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\PovijestNarudzbi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\PovijestNarudzbi.Designer.cs">
+      <DependentUpon>PovijestNarudzbi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\PracenjeStanja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\PracenjeStanja.Designer.cs">
+      <DependentUpon>PracenjeStanja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\PrijavaForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\PrijavaForma.Designer.cs">
+      <DependentUpon>PrijavaForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\PromjenaStatusa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\PromjenaStatusa.Designer.cs">
+      <DependentUpon>PromjenaStatusa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\RegistracijaForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\RegistracijaForma.Designer.cs">
+      <DependentUpon>RegistracijaForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\UpravljanjeKorisnikom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\UpravljanjeKorisnikom.Designer.cs">
+      <DependentUpon>UpravljanjeKorisnikom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\ZaprimljeneNarudzbe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\ZaprimljeneNarudzbe.Designer.cs">
+      <DependentUpon>ZaprimljeneNarudzbe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hrana.cs">
+      <DependentUpon>eNarudzbaEntityData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HranaSastojci.cs">
+      <DependentUpon>eNarudzbaEntityData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="komentariHrana.cs">
+      <DependentUpon>eNarudzbaEntityData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="komentariPice.cs">
+      <DependentUpon>eNarudzbaEntityData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Korisnik.cs">
+      <DependentUpon>eNarudzbaEntityData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Narudzba.cs">
+      <DependentUpon>eNarudzbaEntityData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NarudzbaHrana.cs">
+      <DependentUpon>eNarudzbaEntityData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NarudzbaPice.cs">
+      <DependentUpon>eNarudzbaEntityData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NarudzbaStatus.cs">
+      <DependentUpon>eNarudzbaEntityData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Pice.cs">
+      <DependentUpon>eNarudzbaEntityData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Placanje.cs">
+      <DependentUpon>eNarudzbaEntityData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PocetnaForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PocetnaForma.Designer.cs">
+      <DependentUpon>PocetnaForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrivremenaTablica.cs">
+      <DependentUpon>eNarudzbaEntityData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sastojci.cs">
+      <DependentUpon>eNarudzbaEntityData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Status.cs">
+      <DependentUpon>eNarudzbaEntityData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>eNarudzbaEntityData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TipKorisnika.cs">
+      <DependentUpon>eNarudzbaEntityData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VelicinaHrane.cs">
+      <DependentUpon>eNarudzbaEntityData.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forme\GlavnaFormaDjelatnik.resx">
+      <DependentUpon>GlavnaFormaDjelatnik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\GlavnaFormaNarucitelj.resx">
+      <DependentUpon>GlavnaFormaNarucitelj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\KomentiranjeHrane.resx">
+      <DependentUpon>KomentiranjeHrane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\PonudaJelovnika.resx">
+      <DependentUpon>PonudaJelovnika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\poruke.resx">
+      <DependentUpon>poruke.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\PorukeKomentiranje.resx">
+      <DependentUpon>PorukeKomentiranje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\PorukePonuda.resx">
+      <DependentUpon>PorukePonuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\PorukeRegistracija.resx">
+      <DependentUpon>PorukeRegistracija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\PorukeStatus.resx">
+      <DependentUpon>PorukeStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\PorukeUpravljanje.resx">
+      <DependentUpon>PorukeUpravljanje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\PovijestNarudzbi.resx">
+      <DependentUpon>PovijestNarudzbi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\PracenjeStanja.resx">
+      <DependentUpon>PracenjeStanja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\PrijavaForma.resx">
+      <DependentUpon>PrijavaForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\PromjenaStatusa.resx">
+      <DependentUpon>PromjenaStatusa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\RegistracijaForma.resx">
+      <DependentUpon>RegistracijaForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\UpravljanjeKorisnikom.resx">
+      <DependentUpon>UpravljanjeKorisnikom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\ZaprimljeneNarudzbe.resx">
+      <DependentUpon>ZaprimljeneNarudzbe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PocetnaForma.resx">
+      <DependentUpon>PocetnaForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EntityDeploy Include="eNarudzbaEntityData.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>eNarudzbaEntityData.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="eNarudzbaEntityData.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>eNarudzbaEntityData.edmx</DependentUpon>
+      <LastGenOutput>eNarudzbaEntityData.Context.cs</LastGenOutput>
+    </None>
+    <None Include="eNarudzbaEntityData.edmx.diagram">
+      <DependentUpon>eNarudzbaEntityData.edmx</DependentUpon>
+    </None>
+    <None Include="eNarudzbaEntityData.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>eNarudzbaEntityData.edmx</DependentUpon>
+      <LastGenOutput>eNarudzbaEntityData.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Hrana.datasource" />
+    <None Include="Properties\DataSources\HranaSastojci.datasource" />
+    <None Include="Properties\DataSources\Korisnik.datasource" />
+    <None Include="Properties\DataSources\Narudzba.datasource" />
+    <None Include="Properties\DataSources\NarudzbaHrana.datasource" />
+    <None Include="Properties\DataSources\NarudzbaPice.datasource" />
+    <None Include="Properties\DataSources\NarudzbaStatus.datasource" />
+    <None Include="Properties\DataSources\Pice.datasource" />
+    <None Include="Properties\DataSources\Placanje.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="1403385911_127827.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
