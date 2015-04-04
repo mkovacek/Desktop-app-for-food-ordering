@@ -1,2 +1,3 @@
 # Desktop-app-for-food-ordering
-School project: Desktop app for ordering food and tracking status about order
+<b>Used technologies:</b> C#, EntityFramework, Linq, MSSQL<br>
+<b>School project:description</b> Desktop app for ordering food and tracking status about order<br>
